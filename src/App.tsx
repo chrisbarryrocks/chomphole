@@ -8,6 +8,7 @@ import {
     Body,
     Events,
 } from "matter-js";
+import Chompo from "./Chompo.tsx";
 
 type Shape = "circle" | "square" | "triangle";
 
@@ -304,17 +305,7 @@ const App = () => {
             })}
 
             {/* Chompo */}
-            <div
-                className={`absolute bottom-0 left-1/2 -translate-x-1/2 z-20 transition-transform duration-150 ${
-                    chomped ? "scale-110" : "scale-100"
-                }`}
-            >
-                <img
-                    src={monsterImg}
-                    alt="Chompo"
-                    className="w-64 md:w-80 lg:w-96 pointer-events-none select-none"
-                />
-            </div>
+            <Chompo />
         </div>
     );
 };
